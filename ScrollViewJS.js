@@ -2,6 +2,7 @@
 
   function init()
   {
+    document.getElementById('container').setAttribute('visibility','hidden');
      for(var i=0;i<letters.length;i++)
      {
          addLetter(letters[i],i)
@@ -24,7 +25,11 @@
       document.getElementById("scrollView").appendChild(img);
       console.log(indx)
       if(indx==0){
-        //setTimeout(function(){ onLetterClick(img) },500);
+        
+        setTimeout(function(){ 
+document.getElementById('container').setAttribute('visibility','show');
+          //onLetterClick(img) 
+        },500);
         console.log(">>");
       }
   }
