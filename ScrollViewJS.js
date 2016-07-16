@@ -2,19 +2,27 @@
 
   function init()
   {
-    document.getElementById('container').setAttribute('visibility','hidden');
      for(var i=0;i<letters.length;i++)
      {
-         addLetter(letters[i],i)
+         addLetter(letters[i],i,letters.length)
      }
+    loadedCounter=0;    
+
   }
 
-  function addLetter(name,indx)
+  function addLetter(name,indx,length)
   {
        var img = new Image();
+
        img.onload = function() {
           document.getElementById("img_"+name).width = document.getElementById("img_"+name).width * 0.2;
-          document.getElementById("img_"+name).setAttribute("height", "auto");   
+          document.getElementById("img_"+name).setAttribute("height", "auto"); 
+          loadedCounter++;
+          if(loadedCounter == length)  {
+            document.getElementById("hideAll").style.display = "none";
+            console.log(window.fitstLetter);
+            onLetterClick(window.fitstLetter);
+          }
        }
        img.addEventListener("click", function(){
         onLetterClick(img);
@@ -23,14 +31,12 @@
       img.id="img_"+name
       img.setAttribute("style","display: block; margin:0 auto ; margin-top : 22px ")
       document.getElementById("scrollView").appendChild(img);
-      console.log(indx)
+      
       if(indx==0){
+        window.fitstLetter = img;
+        console.log("inn",fitstLetter)
         
-        setTimeout(function(){ 
-document.getElementById('container').setAttribute('visibility','show');
-          //onLetterClick(img) 
-        },500);
-        console.log(">>");
+       
       }
   }
 
