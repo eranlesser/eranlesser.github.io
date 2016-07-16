@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>האותיות</title>
+   <script type="text/javascript" src="data.js"></script>
+   <script type="text/javascript" src="ScrollViewJS.js"></script>
+   <style>
+     html, body {margin: 0; height: 100%;width: 100%; overflow: hidden}
+     #scrollView{
+       text-align: center;
+       overflow: scroll;
+       max-height: 100vh;
+       margin: 22px;
+       padding-right: 40px;
+       order:2;
+       align-self:flex-end;
+
+     }
+     #main{
+       text-align: center;
+       order:1;
+       align-self:  center;
+       width: 90%;
+     }
+
+     #container{
+       display: flex;
+       flex-direction: row;
+       width: 100%;
+       border:1px solid black;
+      flex-wrap: nowrap;
+      justify-content:  space-between;
+     }
+
+     ::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 7px;
+        }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(0,0,0,.5);
+        -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+    }
+    </style>
+    <script type="text/javascript">
+    window.onload = function() {
+      init();
+    }
+
+    function onClick(){
+      console.log("click")
+    }
+
+    </script>
+  </head>
+  <body  style="height:100%">
+    <div id="container">
+      <div id="main">
+        <img id="img"  />
+      </div>
+      <div id="scrollView">
+      </div>
+    </div>
+
+  </body>
+</html>

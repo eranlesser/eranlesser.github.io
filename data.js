@@ -1,0 +1,1 @@
+var letters = ["alef","beit","gimel","dalet","hei","vav","zain","heit","tet","yood","haf","lamed","mem","nooon","samech","aiin","pei","tsadik","koof","reish","shin","taf"];
