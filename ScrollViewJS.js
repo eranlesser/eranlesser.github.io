@@ -24,7 +24,7 @@
       document.getElementById("scrollView").appendChild(img);
       console.log(indx)
       if(indx==0){
-        setTimeout(function(){ onLetterClick(img) },500);
+        //setTimeout(function(){ onLetterClick(img) },500);
         console.log(">>");
       }
   }
