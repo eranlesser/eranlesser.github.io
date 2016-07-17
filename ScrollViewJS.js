@@ -29,14 +29,11 @@
        } )
       img.src = "images/"+name+".png";
       img.id="img_"+name
-      img.setAttribute("style","display: block; margin:0 auto ; margin-top : 22px ")
+      img.setAttribute("style","display: block; margin:0 auto ; margin-bottom : 44px ")
       document.getElementById("scrollView").appendChild(img);
       
       if(indx==0){
         window.fitstLetter = img;
-        console.log("inn",fitstLetter)
-        
-       
       }
   }
 

@@ -60,15 +60,22 @@
     }
 
     function onClick(){
-      console.log("click")
+      var origSrc = document.getElementById("img").src;
+      if(origSrc.indexOf("2")>0){
+        return;
+      }
+      var newSrc = origSrc.slice(0,origSrc.indexOf("."));
+      document.getElementById("img").src = newSrc + "2.png";
+      document.getElementById("img").setAttribute("height", "auto");
     }
+
 
     </script>
   </head>
   <body  style="height:100%">
     <div id="container">
       <div id="main">
-        <img id="img"  />
+        <img id="img" onclick="onClick()"  />
       </div>
       <div id="scrollView">
       </div>
