@@ -7,7 +7,7 @@
          addLetter(letters[i],i,letters.length)
      }
     loadedCounter=0;    
-    preloadImages();
+    
   }
 
   function preloadImages()
@@ -36,6 +36,7 @@
             document.getElementById("hideAll").style.display = "none";
             console.log(window.fitstLetter);
             onLetterClick(window.fitstLetter);
+            preloadImages();
           }
        }
        img.addEventListener("click", function(){
