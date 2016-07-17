@@ -7,7 +7,21 @@
          addLetter(letters[i],i,letters.length)
      }
     loadedCounter=0;    
+    preloadImages();
+  }
 
+  function preloadImages()
+  {
+    var img;
+    for(var i=0;i<letters.length;i++)
+     {
+       
+      img = new Image();
+      img.src = "images/"+letters[i]+"2.png";
+      img.onload = function(e) {
+          console.log("loadded",e.target);
+      }
+    }
   }
 
   function addLetter(name,indx,length)
